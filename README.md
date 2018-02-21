@@ -31,8 +31,6 @@ If we do not keep track of our customers trends and reactions to our product, it
 - [@aaradhanas](https://github.com/aaradhanas): The Zealous Explorer
 - [@rgopi2win](https://github.com/rgopi2win): The Biz Expert
 
-# MoM 21-02-2018
 
-- Gopi successfully demonstrated pushing of SQL data to Elasticsearch using Logstash.
-- Dataset used: https://github.com/datacharmer/test_db
-- Embedding Kibana dashboards into web app using iFrame.
+## Minutes
+  [Minutes](https://github.com/aaradhanas/legacy-data-analyzer/blob/master/Minutes.md)
