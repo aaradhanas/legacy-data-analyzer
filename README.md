@@ -1,4 +1,4 @@
-# Legacy data analyzer
+# Legacy data analyzer [![Waffle.io - Columns and their card count](https://badge.waffle.io/aaradhanas/legacy-data-analyzer.svg?columns=all)](https://waffle.io/aaradhanas/legacy-data-analyzer)
 
 If you have built an application in the era of relational databases, you would have stored data in a relational form. As NOSQL databases started taking speed, it would have been difficult to migrate since the data volume would have been huge.
 
@@ -11,19 +11,28 @@ If we do not keep track of our customers trends and reactions to our product, it
 - Login as a user and view user specific dashboards
 - User should be able to customize the dashboards
 
-## Technologies
+## Technologies/Tools
 
-- Elasticsearch
-- Kibana
-- Angular
+- [Elasticsearch](https://www.elastic.co/)
+- [Kibana](https://www.elastic.co/products/kibana)
+- [Angular](https://angular.io/)
+- [Logstash](https://www.elastic.co/products/logstash)
+- [JHipster](http://www.jhipster.tech/)
+- [MySQL Workbench](https://www.mysql.com/products/workbench/)
+- [Docker](https://www.docker.com/)
 
 ## Project tracking tools
 
 - [waffle.io](https://waffle.io/)
-
 
 ## The Team
 
 - [@vidhya03](https://github.com/vidhya03) : The Tech Enthusiast
 - [@aaradhanas](https://github.com/aaradhanas): The Zealous Explorer
 - [@rgopi2win](https://github.com/rgopi2win): The Biz Expert
+
+# MoM 21-02-2018
+
+- Gopi successfully demonstrated pushing of SQL data to Elasticsearch using Logstash.
+- Dataset used: https://github.com/datacharmer/test_db
+- Embedding Kibana dashboards into web app using iFrame.
