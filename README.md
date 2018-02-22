@@ -33,4 +33,4 @@ If we do not keep track of our customers trends and reactions to our product, it
 
 
 ## Minutes
-  [Minutes](https://github.com/aaradhanas/legacy-data-analyzer/blob/master/Minutes.md)
+  [Minutes](https://github.com/aaradhanas/legacy-data-analyzer/blob/master/MINUTES.md)
