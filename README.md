@@ -31,6 +31,24 @@ If we do not keep track of our customers trends and reactions to our product, it
 - [@aaradhanas](https://github.com/aaradhanas): The Zealous Explorer
 - [@rgopi2win](https://github.com/rgopi2win): The Biz Expert
 
+## Prerequisites to project setup
+
+Before you can build this project, you must install and configure the following dependencies on your machine:
+
+1. [Node.js](https://nodejs.org/en/): We use Node to run a development web server and build the project.
+   Depending on your system, you can install Node either from source or as a pre-packaged bundle.
+2. [Yarn](https://yarnpkg.com/en/): We use Yarn to manage Node dependencies.
+   Depending on your system, you can install Yarn either from source or as a pre-packaged bundle.
+
+## How to setup the project
+
+- git clone https://github.com/aaradhanas/legacy-data-analyzer into a directory.
+- Import as a Maven project in IntelliJ.
+- Once all the dependencies have been resolved, you can run the app.
+- If you are not using any IDE and would like to run using Command prompt, run the following commands in two separate   terminals:
+
+    `./mvnw`
+    `yarn start`
 
 ## Minutes
   [Minutes](https://github.com/aaradhanas/legacy-data-analyzer/blob/master/MINUTES.md)

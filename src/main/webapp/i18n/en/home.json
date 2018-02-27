@@ -1,0 +1,19 @@
+{
+    "home": {
+        "title": "Welcome to Legacy Data Analyzer!",
+        "subtitle": "Give us your data, we give you insights.",
+        "logged": {
+            "message": "You are logged in as user \"{{username}}\"."
+        },
+        "question": "If you have any question on Legacy Data Analyzer:",
+        "link": {
+            "homepage": "JHipster homepage",
+            "stackoverflow": "JHipster on Stack Overflow",
+            "bugtracker": "Bug tracker",
+            "chat": "JHipster public chat room",
+            "follow": "Follow @vidhya03, @aaradhanas and @rgopi2win on Twitter"
+        },
+        "like": "If you like our work, don't forget to give us a star on",
+        "github": "GitHub"
+    }
+}
