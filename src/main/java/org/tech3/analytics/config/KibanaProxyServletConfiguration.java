@@ -5,11 +5,13 @@ import org.mitre.dsmiley.httpproxy.ProxyServlet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.bind.RelaxedPropertyResolver;
+import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.EnvironmentAware;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
+import org.tech3.analytics.security.KibanaAuthFilter;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -43,5 +45,16 @@ public class KibanaProxyServletConfiguration{
         servletRegistrationBean.addInitParameter("targetUri", applicationProperties.getProxy().getKibana().getTargetUrl());
         servletRegistrationBean.addInitParameter(ProxyServlet.P_LOG, String.valueOf(applicationProperties.getProxy().getKibana().isLoggingEnabled()));
         return servletRegistrationBean;
+    }
+
+    @Bean
+    public FilterRegistrationBean kibanaFilterRegistrationBean(){
+        FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean();
+
+        KibanaAuthFilter kibanaAuthFilter = new KibanaAuthFilter();
+        filterRegistrationBean.setFilter(kibanaAuthFilter);
+        filterRegistrationBean.addUrlPatterns(applicationProperties.getProxy().getKibana().getServletUrl());
+
+        return filterRegistrationBean;
     }
 }
