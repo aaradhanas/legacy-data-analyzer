@@ -106,3 +106,10 @@ jhipster:
 # ===================================================================
 
 application:
+    proxy:
+        kibana:
+            targetUri: http://localhost:5601/
+            servletUrl: /kibanadashboard/*
+            authEnabled: false
+            basicAuth: Basic base64_encoded_string
+            loggingEnabled: false
