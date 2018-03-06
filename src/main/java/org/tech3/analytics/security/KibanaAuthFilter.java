@@ -1,6 +1,7 @@
 package org.tech3.analytics.security;
 
 
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.filter.GenericFilterBean;
@@ -32,6 +33,10 @@ public class KibanaAuthFilter extends GenericFilterBean {
         HttpServletResponse response = (HttpServletResponse) resp;
 
         //Add authentication & role check
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        if(authentication!=null){
+            System.out.println("not null");
+        }
         chain.doFilter(req, resp);
     }
 

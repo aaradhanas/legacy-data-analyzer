@@ -8,6 +8,7 @@ import com.codahale.metrics.MetricRegistry;
 import com.codahale.metrics.servlet.InstrumentedFilter;
 import com.codahale.metrics.servlets.MetricsServlet;
 
+import org.mitre.dsmiley.httpproxy.ProxyServlet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +23,7 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
 import org.springframework.http.MediaType;
+import org.tech3.analytics.security.KibanaAuthFilter;
 
 import java.io.File;
 import java.nio.file.Paths;
@@ -54,6 +56,7 @@ public class WebConfigurer implements ServletContextInitializer, EmbeddedServlet
             log.info("Web application configuration, using profiles: {}", (Object[]) env.getActiveProfiles());
         }
         EnumSet<DispatcherType> disps = EnumSet.of(DispatcherType.REQUEST, DispatcherType.FORWARD, DispatcherType.ASYNC);
+        initKibana(servletContext, disps);
         initMetrics(servletContext, disps);
         if (env.acceptsProfiles(JHipsterConstants.SPRING_PROFILE_PRODUCTION)) {
             initCachingHttpHeadersFilter(servletContext, disps);
@@ -62,6 +65,22 @@ public class WebConfigurer implements ServletContextInitializer, EmbeddedServlet
             initH2Console(servletContext);
         }
         log.info("Web application fully configured");
+    }
+
+    private void initKibana(ServletContext servletContext , EnumSet<DispatcherType> disps) {
+        log.debug("Initializing Kibana filter");
+        FilterRegistration.Dynamic kibanaFilter = servletContext.addFilter("kibanaFilter",
+            new KibanaAuthFilter());
+        kibanaFilter.addMappingForUrlPatterns(disps,true,"/kibanadashboard/*");
+        kibanaFilter.setAsyncSupported(true);
+
+        log.debug("Registering Kibana Servlet");
+        ServletRegistration.Dynamic kibanaProxyServlet =
+            servletContext.addServlet("kibanaProxyServlet", new ProxyServlet());
+        kibanaProxyServlet.addMapping("/kibanadashboard/*");
+        kibanaProxyServlet.setInitParameter("targetUri", "http://localhost:5601/");
+        kibanaProxyServlet.setLoadOnStartup(3);
+
     }
 
     /**

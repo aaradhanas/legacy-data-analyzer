@@ -15,7 +15,7 @@ import org.tech3.analytics.security.KibanaAuthFilter;
 
 import javax.servlet.http.HttpServletRequest;
 
-@Configuration
+//@Configuration
 public class KibanaProxyServletConfiguration{
 
 
@@ -27,7 +27,7 @@ public class KibanaProxyServletConfiguration{
         this.applicationProperties = applicationProperties;
     }
 
-    @Bean
+//    @Bean
     public ServletRegistrationBean kibanaServletRegistrationBean(){
         ServletRegistrationBean servletRegistrationBean = new ServletRegistrationBean(new ProxyServlet(){
             @Override
@@ -47,7 +47,7 @@ public class KibanaProxyServletConfiguration{
         return servletRegistrationBean;
     }
 
-    @Bean
+//    @Bean
     public FilterRegistrationBean kibanaFilterRegistrationBean(){
         FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean();
 
