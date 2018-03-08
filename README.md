@@ -66,9 +66,8 @@ We use yarn scripts and [Webpack][] as our build system.
   
   
   
-  
-  
-  
+ ## Nice to have
+ - Add angular material support - [Documentation](https://material.angular.io/)
   
   
 
