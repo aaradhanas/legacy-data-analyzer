@@ -28,7 +28,6 @@ import {
     ActiveMenuDirective,
     ErrorComponent
 } from './layouts';
-import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
     imports: [

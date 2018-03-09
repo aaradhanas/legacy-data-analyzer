@@ -37,8 +37,8 @@ export class UserService {
         return this.http.get<string[]>(SERVER_API_URL + 'api/users/authorities');
     }
 
-    getDashboard(): Observable<string>{
-        return this.http.get<string>(SERVER_API_URL+ 'api/dashboard');
+    getDashboard(): Observable<string> {
+        return this.http.get<string>(SERVER_API_URL + 'api/dashboard');
     }
 
 }

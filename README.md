@@ -1,4 +1,4 @@
-# Legacy data analyzer [![Waffle.io - Columns and their card count](https://badge.waffle.io/aaradhanas/legacy-data-analyzer.svg?columns=all)](https://waffle.io/aaradhanas/legacy-data-analyzer)
+# Legacy data analyzer [![Build Status](https://travis-ci.org/aaradhanas/legacy-data-analyzer.svg?branch=master)](https://travis-ci.org/aaradhanas/legacy-data-analyzer) [![Waffle.io - Columns and their card count](https://badge.waffle.io/aaradhanas/legacy-data-analyzer.svg?columns=all)](https://waffle.io/aaradhanas/legacy-data-analyzer)
 
 If you have built an application in the era of relational databases, you would have stored data in a relational form. As NOSQL databases started taking speed, it would have been difficult to migrate since the data volume would have been huge.
 

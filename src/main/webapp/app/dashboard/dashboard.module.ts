@@ -7,9 +7,8 @@ import { RouterModule } from '@angular/router';
 import { BlogSharedModule } from '../shared';
 
 import { DashboardComponent } from './dashboard.component';
-import {DASHBOARD_ROUTE} from "./dashboard.route";
-import {DashboardUrlPipe} from "./dashboard.url.pipe";
-
+import {DASHBOARD_ROUTE} from './dashboard.route';
+import {DashboardUrlPipe} from './dashboard.url.pipe';
 
 @NgModule({
     imports: [
