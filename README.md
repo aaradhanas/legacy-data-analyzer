@@ -13,13 +13,13 @@ If we do not keep track of our customers trends and reactions to our product, it
 
 ## Technologies/Tools
 
-- [Elasticsearch](https://www.elastic.co/)
-- [Kibana](https://www.elastic.co/products/kibana)
-- [Angular](https://angular.io/)
-- [Logstash](https://www.elastic.co/products/logstash)
-- [JHipster](http://www.jhipster.tech/)
-- [MySQL Workbench](https://www.mysql.com/products/workbench/)
-- [Docker](https://www.docker.com/)
+- [Elasticsearch][]
+- [Kibana][]
+- [Angular][]
+- [Logstash][]
+- [JHipster][]
+- [MySQL Workbench][]
+- [Docker][]
 
 ## Project tracking tools
 
@@ -39,6 +39,15 @@ Before you can build this project, you must install and configure the following 
    Depending on your system, you can install Node either from source or as a pre-packaged bundle.
 2. [Yarn](https://yarnpkg.com/en/): We use Yarn to manage Node dependencies.
    Depending on your system, you can install Yarn either from source or as a pre-packaged bundle.
+   
+
+After installing Node, you should be able to run the following command to install development tools.
+You will only need to run this command when dependencies change in [package.json](package.json).   
+
+    yarn install
+
+We use yarn scripts and [Webpack][] as our build system.
+
 
 ## How to setup the project
 
@@ -48,7 +57,36 @@ Before you can build this project, you must install and configure the following 
 - If you are not using any IDE and would like to run using Command prompt, run the following commands in two separate   terminals:
 
     `./mvnw`
+	
     `yarn start`
 
 ## Minutes
   [Minutes](https://github.com/aaradhanas/legacy-data-analyzer/blob/master/MINUTES.md)
+  
+  
+  
+  
+ ## Nice to have
+ - Add angular material support - [Documentation](https://material.angular.io/)
+  
+  
+
+
+[Node.js]: https://nodejs.org/
+[Yarn]: https://yarnpkg.org/
+[Webpack]: https://webpack.github.io/
+[Angular CLI]: https://cli.angular.io/
+[BrowserSync]: http://www.browsersync.io/
+[Karma]: http://karma-runner.github.io/
+[Jasmine]: http://jasmine.github.io/2.0/introduction.html
+[Protractor]: https://angular.github.io/protractor/
+[Leaflet]: http://leafletjs.com/
+[DefinitelyTyped]: http://definitelytyped.org/
+
+[Elasticsearch]: https://www.elastic.co/
+[Kibana]: https://www.elastic.co/products/kibana
+[Angular]: https://angular.io/
+[Logstash]: https://www.elastic.co/products/logstash
+[JHipster]: http://www.jhipster.tech/
+[MySQL Workbench]: https://www.mysql.com/products/workbench/
+[Docker]: https://www.docker.com/
