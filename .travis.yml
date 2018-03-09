@@ -1,12 +1,14 @@
 matrix:
   include:
     - language: java
+      before_script:
+        - chmod a+x mvnw
       script:
         - ./mvnw clean package
 
     - language: node_js
       node_js:
-        - "7"
+        - "6.11"
       before_script:
         - yarn install
       script:
