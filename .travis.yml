@@ -1,13 +1,17 @@
 matrix:
   include:
     - language: java
+      before_install:
+        - chmod +x mvnw
+      install:
+        - ./mvnw install -DskipTests=true
       script:
-        - mvn compile
+        - ./mvnw compile
 
     - language: node_js
       node_js:
         - "6.11"
-      before_script:
+      install:
         - yarn install
       script:
         - yarn build
