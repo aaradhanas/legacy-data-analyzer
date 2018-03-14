@@ -991,7 +991,7 @@
         <!-- jhipster-needle-maven-add-profile -->
 
         <profile>
-            <id>spotbugs</id>
+            <id>spotbugs-profile</id>
             <build>
                 <plugins>
                     <plugin>
