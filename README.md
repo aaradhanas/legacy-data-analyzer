@@ -63,13 +63,28 @@ We use yarn scripts and [Webpack][] as our build system.
 ## Minutes
   [Minutes](https://github.com/aaradhanas/legacy-data-analyzer/blob/master/MINUTES.md)
   
-  
-  
-  
- ## Nice to have
+## Nice to have
  - Add angular material support - [Documentation](https://material.angular.io/)
-  
-  
+ 
+## Spotbugs 
+ [SpotBugs](https://spotbugs.github.io/) is a program which uses static analysis to look for bugs in Java code.
+
+  Spotbugs can be triggred via compile time.
+```
+  mvn -Pspotbugs compile
+``` 
+
+  Spotbugs can also be check by using the below command.
+```
+  mvn -Pspotbugs spotbugs:check
+```
+
+  `Debug` the spotbugs error via the following command.
+```
+  mvn -Pspotbugs spotbugs:gui
+```  
+  The above command will popup spotbugs errors in GUI like this
+  ![spotbugs error view in GUI](src/test/resources/spotbugs-viewer-gui.png)  
 
 
 [Node.js]: https://nodejs.org/

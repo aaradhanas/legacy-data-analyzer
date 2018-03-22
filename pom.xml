@@ -991,8 +991,16 @@
         <!-- jhipster-needle-maven-add-profile -->
 
         <profile>
-            <id>spotbugs-profile</id>
+            <id>spotbugs</id>
             <build>
+                <resources>
+                    <resource>
+                        <directory>src/main/java</directory>
+                        <includes>
+                            <include>**/*.java</include>
+                        </includes>
+                    </resource>
+                </resources>
                 <plugins>
                     <plugin>
                         <groupId>com.github.spotbugs</groupId>
