@@ -47,7 +47,7 @@ public class ProfileInfoResource {
         return null;
     }
 
-    class ProfileInfoVM {
+    static class ProfileInfoVM {
 
         private String[] activeProfiles;
 

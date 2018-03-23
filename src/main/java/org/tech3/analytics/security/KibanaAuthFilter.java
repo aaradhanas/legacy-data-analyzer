@@ -28,9 +28,6 @@ public class KibanaAuthFilter extends GenericFilterBean {
     public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain) throws
             IOException, ServletException {
 
-        HttpServletRequest request = (HttpServletRequest) req;
-        HttpServletResponse response = (HttpServletResponse) resp;
-
         //Add authentication & role check
         chain.doFilter(req, resp);
     }

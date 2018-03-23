@@ -5,6 +5,7 @@ matrix:
         - chmod +x mvnw
       script:
         - ./mvnw compile
+        - ./mvnw -Pspotbugs spotbugs:check
 
     - language: node_js
       node_js:
